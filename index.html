@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Reapers — Impact of Social Media on Mental Health</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="mainNav">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 10L10 3L17 10L10 17Z" stroke="#faf8f3" stroke-width="1.5" fill="none"/>
+        <path d="M7 10L10 7L13 10L10 13Z" fill="#faf8f3" opacity="0.6"/>
+        <circle cx="10" cy="10" r="1.5" fill="#faf8f3"/>
+      </svg>
+    </div>
+    <span class="nav-brand">Data <span>Reapers</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#datasets">Datasets</a></li>
+    <li><a href="#workflow">Pipeline</a></li>
+    <li><a href="#results">Findings</a></li>
+    <li><a href="#dashboard">Dashboard</a></li>
+    <li><a href="#recs">Recommendations</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#contact" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-orb o1"></div>
+  <div class="hero-orb o2"></div>
+  <div class="hero-orb o3"></div>
+
+  <div class="hero-badge">
+    <div class="badge-dot"></div>
+    Data Analysis Project · Gen Z · 2025
+  </div>
+
+  <h1>Impact of Social Media<br/>on <em>Mental Health</em></h1>
+  <p class="hero-sub">
+    A data-driven investigation into how digital habits shape the psychological wellbeing of Gen Z — locally in Egypt and globally. Moving beyond assumptions to evidence.
+  </p>
+  <div class="hero-ctas">
+    <a href="#results" class="btn-p">← Explore Findings</a>
+    <a href="#workflow" class="btn-s">View Pipeline</a>
+  </div>
+  <div class="hero-stats">
+    <div class="hs-item">
+      <div class="hs-num">2</div>
+      <div class="hs-label">Datasets</div>
+    </div>
+    <div class="hs-item">
+      <div class="hs-num">8</div>
+      <div class="hs-label">Variables Tracked</div>
+    </div>
+    <div class="hs-item">
+      <div class="hs-num">6</div>
+      <div class="hs-label">Key Findings</div>
+    </div>
+    <div class="hs-item">
+      <div class="hs-num">4</div>
+      <div class="hs-label">Team Members</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <span class="sec-label">About the Project</span>
+      <h2 class="sec-title">Why does this matter?</h2>
+      <p>
+        Social media use among Gen Z has become a daily constant — yet its relationship with mental health is often discussed through opinion rather than data. This project was built to change that.
+      </p>
+      <p>
+        We studied whether habits like screen time, doomscrolling, morning phone checks, and short-form content consumption correlate with increased anxiety, overthinking, mood instability, and disrupted sleep — across both Egyptian Gen Z and a global sample.
+      </p>
+      <a href="#workflow" class="btn-p">See Our Methodology →</a>
+    </div>
+    <div class="mini-grid reveal">
+      <div class="mini-card">
+        <div class="ic">🎯</div>
+        <h4>Research Question</h4>
+        <p>Does social media usage correlate with measurable psychological strain in Gen Z?</p>
+      </div>
+      <div class="mini-card">
+        <div class="ic">🌍</div>
+        <h4>Scope</h4>
+        <p>Egypt (local sample) + global Gen Z behavioral data</p>
+      </div>
+      <div class="mini-card">
+        <div class="ic">📊</div>
+        <h4>Approach</h4>
+        <p>Quantitative correlation analysis with normalized PostgreSQL database</p>
+      </div>
+      <div class="mini-card">
+        <div class="ic">💡</div>
+        <h4>Outcome</h4>
+        <p>Evidence-based recommendations for healthier digital habits</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DATASETS ══ -->
+<section id="datasets">
+  <div class="sec-header reveal">
+    <span class="sec-label">Data Sources</span>
+    <h2 class="sec-title">The Datasets</h2>
+    <p class="sec-desc">Two primary datasets processed, cleaned, unified, and loaded into a normalized PostgreSQL schema.</p>
+  </div>
+  <div class="ds-grid">
+
+    <div class="ds-card reveal">
+      <div class="ds-header">
+        <div class="ds-icon">🇪🇬</div>
+        <span class="badge b-raw">RAW</span>
+      </div>
+      <h3>Egyptian Gen Z Survey</h3>
+      <p>Primary survey data collected locally from Egyptian Gen Z respondents — bilingual (Arabic & English), covering digital habits, sleep patterns, mood, and app usage.</p>
+      <div class="ds-meta">
+        <span>📍 Egypt — Local</span>
+        <span>🗣 Bilingual</span>
+      </div>
+    </div>
+
+    <div class="ds-card reveal">
+      <div class="ds-header">
+        <div class="ds-icon">🌐</div>
+        <span class="badge b-raw">RAW</span>
+      </div>
+      <h3>Global Gen Z Dataset</h3>
+      <p>International behavioral dataset covering Gen Z habits worldwide — social media usage, sleep hours, doomscrolling levels, physical activity, and content type preferences.</p>
+      <div class="ds-meta">
+        <span>🌍 Global</span>
+        <span>🗣 English</span>
+      </div>
+    </div>
+
+    <div class="ds-card reveal">
+      <div class="ds-header">
+        <div class="ds-icon">🧹</div>
+        <span class="badge b-clean">CLEANED</span>
+      </div>
+      <h3>Unified & Cleaned Dataset</h3>
+      <p>Both sources translated to English, merged from multiple Excel files, deduplicated, app names standardized, data types corrected, and text values encoded into organized categories.</p>
+      <div class="ds-meta">
+        <span>🔧 Python + Pandas</span>
+        <span>✅ Normalized</span>
+      </div>
+    </div>
+
+    <div class="ds-card reveal">
+      <div class="ds-header">
+        <div class="ds-icon">🐘</div>
+        <span class="badge b-db">DATABASE</span>
+      </div>
+      <h3>PostgreSQL on Supabase</h3>
+      <p>Normalized relational schema designed for analytical queries. Connected to Power BI, Python (via psycopg2), pgAdmin, and REST API for seamless multi-tool access during analysis and presentation.</p>
+      <div class="ds-meta">
+        <span>☁️ Supabase</span>
+        <span>🔗 4 Connectors</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ VARIABLES ══ -->
+<section id="variables">
+  <div class="var-inner">
+    <div class="sec-header reveal">
+      <span class="sec-label">Feature Engineering</span>
+      <h2 class="sec-title">Variables Tracked</h2>
+      <p class="sec-desc">Every data point collected was mapped to a behavioral or psychological dimension.</p>
+    </div>
+    <div class="var-grid">
+      <div class="var-card reveal">
+        <div class="var-dot" style="background:var(--beige-600)"></div>
+        <div><h4>Daily Phone Usage</h4><p>Total hours per day spent on the phone</p></div>
+      </div>
+      <div class="var-card reveal">
+        <div class="var-dot" style="background:var(--beige-600)"></div>
+        <div><h4>Social Media Hours</h4><p>Hours specifically on social platforms</p></div>
+      </div>
+      <div class="var-card reveal">
+        <div class="var-dot" style="background:var(--beige-500)"></div>
+        <div><h4>Sleep Duration</h4><p>Average nightly sleep hours</p></div>
+      </div>
+      <div class="var-card reveal">
+        <div class="var-dot" style="background:var(--beige-500)"></div>
+        <div><h4>Morning Phone Check</h4><p>Whether device is checked immediately upon waking</p></div>
+      </div>
+      <div class="var-card reveal">
+        <div class="var-dot" style="background:var(--beige-700)"></div>
+        <div><h4>Nervousness Level</h4><p>Self-reported irritability and emotional reactivity</p></div>
+      </div>
+      <div class="var-card reveal">
+        <div class="var-dot" style="background:var(--beige-700)"></div>
+        <div><h4>Physical Activity</h4><p>Frequency and type of exercise per week</p></div>
+      </div>
+      <div class="var-card reveal">
+        <div class="var-dot" style="background:var(--beige-400)"></div>
+        <div><h4>Top Apps Used</h4><p>Most-used applications (standardized naming)</p></div>
+      </div>
+      <div class="var-card reveal">
+        <div class="var-dot" style="background:var(--beige-400)"></div>
+        <div><h4>Doomscrolling Level</h4><p>Tendency to endlessly browse negative content</p></div>
+      </div>
+      <div class="var-card reveal">
+        <div class="var-dot" style="background:var(--beige-600)"></div>
+        <div><h4>Content Type</h4><p>Short-form video, news, social posts, etc.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WORKFLOW ══ -->
+<section id="workflow">
+  <div style="max-width:1150px;margin:0 auto;padding:0 0">
+    <div class="sec-header reveal">
+      <span class="sec-label">Methodology</span>
+      <h2 class="sec-title">Analysis Pipeline</h2>
+      <p class="sec-desc">From raw bilingual survey data to actionable insight — every step deliberate.</p>
+    </div>
+    <div class="pipeline reveal">
+      <div class="p-step">
+        <div class="p-num">01</div>
+        <div class="p-node">🎯</div>
+        <h4>Problem Definition</h4>
+        <p>Frame research questions around Gen Z mental health indicators</p>
+      </div>
+      <div class="p-step">
+        <div class="p-num">02</div>
+        <div class="p-node">📥</div>
+        <h4>Data Collection</h4>
+        <p>Survey (Egypt) + global dataset acquisition</p>
+      </div>
+      <div class="p-step">
+        <div class="p-num">03</div>
+        <div class="p-node">🌐</div>
+        <h4>Translation & Merge</h4>
+        <p>Arabic → English unification + Excel merge with Pandas</p>
+      </div>
+      <div class="p-step">
+        <div class="p-num">04</div>
+        <div class="p-node">🧹</div>
+        <h4>Cleaning</h4>
+        <p>Dedup, type casting, value standardization</p>
+      </div>
+      <div class="p-step">
+        <div class="p-num">05</div>
+        <div class="p-node">🐘</div>
+        <h4>DB Design</h4>
+        <p>Normalized PostgreSQL schema on Supabase</p>
+      </div>
+      <div class="p-step">
+        <div class="p-num">06</div>
+        <div class="p-node">🔍</div>
+        <h4>EDA + SQL</h4>
+        <p>Exploratory analysis, quality checks, insight extraction</p>
+      </div>
+      <div class="p-step">
+        <div class="p-num">07</div>
+        <div class="p-node">📊</div>
+        <h4>Visualization</h4>
+        <p>Power BI dashboards + Python charts</p>
+      </div>
+      <div class="p-step">
+        <div class="p-num">08</div>
+        <div class="p-node">🚀</div>
+        <h4>Presentation</h4>
+        <p>Findings, correlations & actionable recommendations</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TECH STACK ══ -->
+<section id="stack">
+  <div class="stack-inner">
+    <div class="sec-header reveal">
+      <span class="sec-label">Tech Stack</span>
+      <h2 class="sec-title">Tools & Technologies</h2>
+      <p class="sec-desc">A full modern data engineering and analytics stack.</p>
+    </div>
+    <div class="stack-groups">
+      <div class="stack-group reveal">
+        <span class="sg-label">Data Processing</span>
+        <div class="sg-items">
+          <div class="sg-item"><span class="ti">🐍</span> Python 3</div>
+          <div class="sg-item"><span class="ti">🐼</span> Pandas</div>
+          <div class="sg-item"><span class="ti">📓</span> Jupyter</div>
+          <div class="sg-item"><span class="ti">📊</span> Excel / OpenPyXL</div>
+        </div>
+      </div>
+      <div class="stack-group reveal">
+        <span class="sg-label">Database</span>
+        <div class="sg-items">
+          <div class="sg-item"><span class="ti">🐘</span> PostgreSQL</div>
+          <div class="sg-item"><span class="ti">☁️</span> Supabase</div>
+          <div class="sg-item"><span class="ti">🔧</span> pgAdmin</div>
+          <div class="sg-item"><span class="ti">🔗</span> REST API</div>
+        </div>
+      </div>
+      <div class="stack-group reveal">
+        <span class="sg-label">Analysis & Visualization</span>
+        <div class="sg-items">
+          <div class="sg-item"><span class="ti">📈</span> Power BI</div>
+          <div class="sg-item"><span class="ti">🔢</span> SQL</div>
+          <div class="sg-item"><span class="ti">📉</span> Matplotlib</div>
+          <div class="sg-item"><span class="ti">🌊</span> Seaborn</div>
+        </div>
+      </div>
+      <div class="stack-group reveal">
+        <span class="sg-label">Collaboration</span>
+        <div class="sg-items">
+          <div class="sg-item"><span class="ti">🐙</span> GitHub</div>
+          <div class="sg-item"><span class="ti">📋</span> Notion</div>
+          <div class="sg-item"><span class="ti">🔄</span> Git</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RESULTS ══ -->
+<section id="results">
+  <div class="sec-header reveal">
+    <span class="sec-label">Key Findings</span>
+    <h2 class="sec-title">What the Data Revealed</h2>
+    <p class="sec-desc">Six evidence-based correlations extracted from both Egyptian and global Gen Z data.</p>
+  </div>
+  <div class="findings-grid">
+
+    <div class="finding-card reveal">
+      <div class="fc-icon">🪞</div>
+      <div class="fc-num">01</div>
+      <h3>Higher Usage → More Social Comparison</h3>
+      <p>Increased social media use is strongly associated with elevated levels of social comparison behavior, affecting self-perception and satisfaction.</p>
+    </div>
+
+    <div class="finding-card reveal">
+      <div class="fc-icon">🌀</div>
+      <div class="fc-num">02</div>
+      <h3>More Screen Time → Increased Overthinking</h3>
+      <p>Higher usage rates correlate with measurably greater levels of overthinking and rumination, particularly in the hours before sleep.</p>
+    </div>
+
+    <div class="finding-card reveal">
+      <div class="fc-icon">😴</div>
+      <div class="fc-num">03</div>
+      <h3>Screen Time Raises Sleep Disorder Risk</h3>
+      <p>Elevated daily screen time is positively correlated with higher risk of sleep problems — difficulty falling asleep, lower sleep quality, and reduced duration.</p>
+    </div>
+
+    <div class="finding-card reveal">
+      <div class="fc-icon">😤</div>
+      <div class="fc-num">04</div>
+      <h3>Sleep Instability → Mood Instability</h3>
+      <p>As sleep disorder risk increases, mood stability decreases. Poor sleep and emotional dysregulation form a reinforcing cycle.</p>
+    </div>
+
+    <div class="finding-card reveal">
+      <div class="fc-icon">📱</div>
+      <div class="fc-num">05</div>
+      <h3>Morning Phone Check → Higher Nervousness</h3>
+      <p>Individuals who check their phones immediately upon waking show significantly higher self-reported nervousness and irritability throughout the day.</p>
+    </div>
+
+    <div class="finding-card reveal">
+      <div class="fc-icon">🎬</div>
+      <div class="fc-num">06</div>
+      <h3>Short-Form Video Drives Screen Time & Poor Sleep</h3>
+      <p>Short-form video content (Reels, TikTok, Shorts) is the content type most strongly correlated with both increased daily screen time and sleep disruption.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ DASHBOARD ══ -->
+<section id="dashboard">
+  <div class="sec-header reveal">
+    <span class="sec-label">Data Exploration</span>
+    <h2 class="sec-title">Interactive Dashboard</h2>
+    <p class="sec-desc">The dashboard visualizes the project findings from the analyzed datasets. Users can interact with charts and filters to explore the statistics.</p>
+  </div>
+  
+  <div class="dash-wrapper reveal">
+    <div class="dash-stats">
+      <div class="dash-stat">
+        <span class="dash-stat-label">Total Records</span>
+        <span class="dash-stat-val">10,000+</span>
+      </div>
+      <div class="dash-stat">
+        <span class="dash-stat-label">Avg Screen Time</span>
+        <span class="dash-stat-val">4.5 hrs/day</span>
+      </div>
+      <div class="dash-stat">
+        <span class="dash-stat-label">Sleep Impact</span>
+        <span class="dash-stat-val">68%</span>
+      </div>
+      <div class="dash-stat">
+        <span class="dash-stat-label">Anxiety Correl.</span>
+        <span class="dash-stat-val">+0.74</span>
+      </div>
+    </div>
+    
+    <div class="dash-container">
+      <div class="dash-top">
+        <div class="dash-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="dash-title">Mental Health Impact Dashboard <span>.pbix</span></div>
+      </div>
+      <iframe title="Power BI Dashboard" src="POWER_BI_LINK_HERE" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RECOMMENDATIONS ══ -->
+<section id="recs">
+  <div class="recs-inner">
+    <div class="sec-header reveal">
+      <span class="sec-label">Actionable Insights</span>
+      <h2 class="sec-title">Recommendations</h2>
+      <p class="sec-desc">Evidence-based habits to protect mental health in a hyper-connected world.</p>
+    </div>
+    <div class="rec-list">
+
+      <div class="rec-item reveal">
+        <div class="rec-icon">⏰</div>
+        <div>
+          <h4>Delay Your Morning Phone Check</h4>
+          <p>Avoid checking your phone for the first 30–60 minutes after waking. Data shows this simple habit is associated with lower daily nervousness and more stable mood throughout the day.</p>
+        </div>
+      </div>
+
+      <div class="rec-item reveal">
+        <div class="rec-icon">🌿</div>
+        <div>
+          <h4>Schedule Regular Digital Detox Periods</h4>
+          <p>Deliberately allocating daily or weekly offline time has been shown in referenced studies to reduce anxiety, improve focus, and restore emotional regulation.</p>
+        </div>
+      </div>
+
+      <div class="rec-item reveal">
+        <div class="rec-icon">🎬</div>
+        <div>
+          <h4>Reduce Short-Form Video Consumption</h4>
+          <p>Short-form content (TikTok, Reels, Shorts) is the single strongest driver of screen time overrun and sleep disruption. Consider time limits or scheduled viewing windows.</p>
+        </div>
+      </div>
+
+      <div class="rec-item reveal">
+        <div class="rec-icon">📊</div>
+        <div>
+          <h4>Track Your App's Mental Impact</h4>
+          <p>Actively monitor how individual apps affect your mood and anxiety. Use built-in screen time reports to identify patterns between heavy app use and emotional state changes.</p>
+        </div>
+      </div>
+
+      <div class="rec-item reveal">
+        <div class="rec-icon">🎨</div>
+        <div>
+          <h4>Use Grayscale Mode to Reduce Compulsive Use</h4>
+          <p>Switching your device display to grayscale removes the dopamine-triggering color stimulation that makes apps artificially compelling, reducing mindless scrolling significantly.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ RESEARCH ══ -->
+<section id="research">
+  <div class="res-inner">
+    <div class="sec-header reveal">
+      <span class="sec-label">Scientific Foundation</span>
+      <h2 class="sec-title">Supporting Research</h2>
+      <p class="sec-desc">Our findings align with and are supported by peer-reviewed studies on digital behavior and mental health.</p>
+    </div>
+
+    <div class="res-card reveal">
+      <h4>Social Media Reduction Studies</h4>
+      <p>Multiple studies examining the effects of intentionally reducing social media use — or implementing full internet blocks — consistently report significant improvements across core mental health and cognitive metrics.</p>
+      <div class="res-outcomes">
+        <span class="res-out">↓ Reduced Anxiety</span>
+        <span class="res-out">↑ Improved Sleep Quality</span>
+        <span class="res-out">↑ Better Focus</span>
+        <span class="res-out">↑ Greater Self-Discipline</span>
+      </div>
+    </div>
+
+    <div class="res-card reveal">
+      <h4>Screen Time & Adolescent Wellbeing</h4>
+      <p>Research consistently shows a dose-response relationship between screen time and psychological wellbeing markers in adolescents and young adults — supporting our correlation findings between usage hours, sleep disruption, and mood dysregulation.</p>
+      <div class="res-outcomes">
+        <span class="res-out">📉 Mood Instability with High Usage</span>
+        <span class="res-out">😴 Sleep Quality Degradation</span>
+        <span class="res-out">🧠 Cognitive Overload Signals</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ TEAM ══ -->
+<section id="team">
+  <div class="sec-header reveal">
+    <span class="sec-label">The Team</span>
+    <h2 class="sec-title">Data Reapers</h2>
+    <p class="sec-desc">Four analysts. One mission: turn data into clarity.</p>
+  </div>
+  <div class="team-grid">
+
+    <div class="team-card reveal glass-card">
+      <div class="t-avatar av1">A</div>
+      <h3>[Team Member 1]</h3>
+      <div class="t-role">Team Lead · Data Engineer</div>
+      <p>Database design, Supabase setup, pipeline architecture, and API integration.</p>
+      <div class="t-skills">
+        <span class="t-skill">PostgreSQL</span>
+        <span class="t-skill">Python</span>
+        <span class="t-skill">Supabase</span>
+      </div>
+      <div class="t-socials">
+        <a href="LINKEDIN_PROFILE_HERE" target="_blank" class="t-social-btn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="GITHUB_PROFILE_HERE" target="_blank" class="t-social-btn" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="team-card reveal glass-card">
+      <div class="t-avatar av2">B</div>
+      <h3>[Team Member 2]</h3>
+      <div class="t-role">Data Analyst</div>
+      <p>EDA, SQL insight extraction, data quality checks, and behavioral pattern analysis.</p>
+      <div class="t-skills">
+        <span class="t-skill">SQL</span>
+        <span class="t-skill">Pandas</span>
+        <span class="t-skill">EDA</span>
+      </div>
+      <div class="t-socials">
+        <a href="LINKEDIN_PROFILE_HERE" target="_blank" class="t-social-btn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="GITHUB_PROFILE_HERE" target="_blank" class="t-social-btn" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="team-card reveal glass-card">
+      <div class="t-avatar av3">C</div>
+      <h3>[Team Member 3]</h3>
+      <div class="t-role">Data Cleaning & Processing</div>
+      <p>Translation pipeline, Excel merging, standardization, deduplication, and type encoding.</p>
+      <div class="t-skills">
+        <span class="t-skill">Pandas</span>
+        <span class="t-skill">OpenPyXL</span>
+        <span class="t-skill">ETL</span>
+      </div>
+      <div class="t-socials">
+        <a href="LINKEDIN_PROFILE_HERE" target="_blank" class="t-social-btn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="GITHUB_PROFILE_HERE" target="_blank" class="t-social-btn" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="team-card reveal glass-card">
+      <div class="t-avatar av4">D</div>
+      <h3>[Team Member 4]</h3>
+      <div class="t-role">Visualization & Reporting</div>
+      <p>Power BI dashboards, Python charts, visual storytelling, and final presentation design.</p>
+      <div class="t-skills">
+        <span class="t-skill">Power BI</span>
+        <span class="t-skill">Seaborn</span>
+        <span class="t-skill">Matplotlib</span>
+      </div>
+      <div class="t-socials">
+        <a href="LINKEDIN_PROFILE_HERE" target="_blank" class="t-social-btn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="GITHUB_PROFILE_HERE" target="_blank" class="t-social-btn" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ REPOSITORY ══ -->
+<section id="repository">
+  <div class="repo-banner reveal">
+    <div class="repo-content">
+      <div class="repo-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+      </div>
+      <h2>Open Source Pipeline</h2>
+      <p>Explore the full code, Jupyter notebooks, ETL scripts, and data dictionaries that power this analysis.</p>
+      <a href="https://github.com/yossefhaytham/Population-Health" target="_blank" class="btn-repo">
+        View Project Repository
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact">
+  <div class="contact-box reveal">
+    <h2>Get in Touch</h2>
+    <p>Questions about the research, methodology, or data? We'd love to hear from you.</p>
+    <div class="c-row">
+      <input class="f-in" type="text" placeholder="Name"/>
+      <input class="f-in" type="email" placeholder="Email" dir="ltr"/>
+    </div>
+    <div class="c-full">
+      <input class="f-in" type="text" placeholder="Subject"/>
+    </div>
+    <div class="c-full">
+      <textarea class="f-ta" placeholder="Your message…"></textarea>
+    </div>
+    <button class="btn-c" onclick="this.textContent='✓ Message Sent!';setTimeout(()=>this.textContent='Send Message',2500)">Send Message</button>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="foot-logo">Data <span>Reapers</span></div>
+  <p>Impact of Social Media on Mental Health · Gen Z · 2025<br/>Data Analysis Project — Egypt & Global</p>
+</footer>
+
+<!-- Scripts -->
+<script src="script.js"></script>
+</body>
+</html>
