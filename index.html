@@ -35,6 +35,10 @@
     <button id="langToggle" class="control-btn" aria-label="Toggle Language">
       <span class="lang-text">AR</span>
     </button>
+    <button id="menuToggle" class="control-btn mobile-menu-btn" aria-label="Toggle Menu">
+      <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
   </div>
 </nav>
 
@@ -63,10 +67,6 @@
       <div class="hs-label" data-i18n="hero_stat_datasets">Datasets</div>
     </div>
     <div class="hs-item">
-      <div class="hs-num">8</div>
-      <div class="hs-label" data-i18n="hero_stat_variables">Variables Tracked</div>
-    </div>
-    <div class="hs-item">
       <div class="hs-num">6</div>
       <div class="hs-label" data-i18n="hero_stat_findings">Key Findings</div>
     </div>
@@ -93,22 +93,30 @@
     </div>
     <div class="mini-grid reveal">
       <div class="mini-card">
-        <div class="ic">🎯</div>
+        <div class="ic">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+        </div>
         <h4 data-i18n="about_card_1_title">Research Question</h4>
         <p data-i18n="about_card_1_desc">Does social media usage correlate with measurable psychological strain in Gen Z?</p>
       </div>
       <div class="mini-card">
-        <div class="ic">🌍</div>
+        <div class="ic">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+        </div>
         <h4 data-i18n="about_card_2_title">Scope</h4>
         <p data-i18n="about_card_2_desc">Egypt (local sample) + global Gen Z behavioral data</p>
       </div>
       <div class="mini-card">
-        <div class="ic">📊</div>
+        <div class="ic">
+          <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path></svg>
+        </div>
         <h4 data-i18n="about_card_3_title">Approach</h4>
-        <p data-i18n="about_card_3_desc">Quantitative correlation analysis with normalized PostgreSQL database</p>
+        <p data-i18n="about_card_3_desc">Data analysis to discover the impact of digital habits on mental health</p>
       </div>
       <div class="mini-card">
-        <div class="ic">💡</div>
+        <div class="ic">
+          <svg viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .6 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
+        </div>
         <h4 data-i18n="about_card_4_title">Outcome</h4>
         <p data-i18n="about_card_4_desc">Evidence-based recommendations for healthier digital habits</p>
       </div>
@@ -116,54 +124,7 @@
   </div>
 </section>
 
-<!-- ══ VARIABLES ══ -->
-<section id="variables">
-  <div class="var-inner">
-    <div class="sec-header reveal">
-      <span class="sec-label" data-i18n="variables_label">Feature Engineering</span>
-      <h2 class="sec-title" data-i18n="variables_title">Variables Tracked</h2>
-      <p class="sec-desc" data-i18n="variables_desc">Every data point collected was mapped to a behavioral or psychological dimension.</p>
-    </div>
-    <div class="var-grid">
-      <div class="var-card reveal">
-        <div class="var-dot" style="background:var(--beige-600)"></div>
-        <div><h4 data-i18n="var_1_title">Daily Phone Usage</h4><p data-i18n="var_1_desc">Total hours per day spent on the phone</p></div>
-      </div>
-      <div class="var-card reveal">
-        <div class="var-dot" style="background:var(--beige-600)"></div>
-        <div><h4 data-i18n="var_2_title">Social Media Hours</h4><p data-i18n="var_2_desc">Hours specifically on social platforms</p></div>
-      </div>
-      <div class="var-card reveal">
-        <div class="var-dot" style="background:var(--beige-500)"></div>
-        <div><h4 data-i18n="var_3_title">Sleep Duration</h4><p data-i18n="var_3_desc">Average nightly sleep hours</p></div>
-      </div>
-      <div class="var-card reveal">
-        <div class="var-dot" style="background:var(--beige-500)"></div>
-        <div><h4 data-i18n="var_4_title">Morning Phone Check</h4><p data-i18n="var_4_desc">Whether device is checked immediately upon waking</p></div>
-      </div>
-      <div class="var-card reveal">
-        <div class="var-dot" style="background:var(--beige-700)"></div>
-        <div><h4 data-i18n="var_5_title">Nervousness Level</h4><p data-i18n="var_5_desc">Self-reported irritability and emotional reactivity</p></div>
-      </div>
-      <div class="var-card reveal">
-        <div class="var-dot" style="background:var(--beige-700)"></div>
-        <div><h4 data-i18n="var_6_title">Physical Activity</h4><p data-i18n="var_6_desc">Frequency and type of exercise per week</p></div>
-      </div>
-      <div class="var-card reveal">
-        <div class="var-dot" style="background:var(--beige-400)"></div>
-        <div><h4 data-i18n="var_7_title">Top Apps Used</h4><p data-i18n="var_7_desc">Most-used applications (standardized naming)</p></div>
-      </div>
-      <div class="var-card reveal">
-        <div class="var-dot" style="background:var(--beige-400)"></div>
-        <div><h4 data-i18n="var_8_title">Doomscrolling Level</h4><p data-i18n="var_8_desc">Tendency to endlessly browse negative content</p></div>
-      </div>
-      <div class="var-card reveal">
-        <div class="var-dot" style="background:var(--beige-600)"></div>
-        <div><h4 data-i18n="var_9_title">Content Type</h4><p data-i18n="var_9_desc">Short-form video, news, social posts, etc.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- ══ RESULTS ══ -->
 <section id="results">
@@ -175,42 +136,54 @@
   <div class="findings-grid">
 
     <div class="finding-card reveal">
-      <div class="fc-icon">🪞</div>
+      <div class="fc-icon">
+        <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path><line x1="12" y1="1" x2="12" y2="23" stroke-dasharray="3 3"></line></svg>
+      </div>
       <div class="fc-num">01</div>
       <h3 data-i18n="finding_1_title">Higher Usage → More Social Comparison</h3>
       <p data-i18n="finding_1_desc">Increased social media use is strongly associated with elevated levels of social comparison behavior, affecting self-perception and satisfaction.</p>
     </div>
 
     <div class="finding-card reveal">
-      <div class="fc-icon">🌀</div>
+      <div class="fc-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 7.54 16.59"></path><path d="M12 6a6 6 0 0 1 4.5 9.9"></path><path d="M12 10a2 2 0 0 1 1.41 3.41"></path><circle cx="12" cy="12" r="1"></circle><path d="M2.46 5.41A10 10 0 0 0 12 22V12"></path></svg>
+      </div>
       <div class="fc-num">02</div>
       <h3 data-i18n="finding_2_title">More Screen Time → Increased Overthinking</h3>
       <p data-i18n="finding_2_desc">Higher usage rates correlate with measurably greater levels of overthinking and rumination, particularly in the hours before sleep.</p>
     </div>
 
     <div class="finding-card reveal">
-      <div class="fc-icon">😴</div>
+      <div class="fc-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path><path d="M19 3v4M21 5h-4M14 2v2M15 3h-2"></path></svg>
+      </div>
       <div class="fc-num">03</div>
       <h3 data-i18n="finding_3_title">Screen Time Raises Sleep Disorder Risk</h3>
       <p data-i18n="finding_3_desc">Elevated daily screen time is positively correlated with higher risk of sleep problems — difficulty falling asleep, lower sleep quality, and reduced duration.</p>
     </div>
 
     <div class="finding-card reveal">
-      <div class="fc-icon">😤</div>
+      <div class="fc-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 12h3l3-9 4 18 3-12h5"></path></svg>
+      </div>
       <div class="fc-num">04</div>
       <h3 data-i18n="finding_4_title">Sleep Instability → Mood Instability</h3>
       <p data-i18n="finding_4_desc">As sleep disorder risk increases, mood stability decreases. Poor sleep and emotional dysregulation form a reinforcing cycle.</p>
     </div>
 
     <div class="finding-card reveal">
-      <div class="fc-icon">📱</div>
+      <div class="fc-icon">
+        <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="3"></line><path d="M9 10l2 2 4-4"></path></svg>
+      </div>
       <div class="fc-num">05</div>
       <h3 data-i18n="finding_5_title">Morning Phone Check → Higher Nervousness</h3>
       <p data-i18n="finding_5_desc">Individuals who check their phones immediately upon waking show significantly higher self-reported nervousness and irritability throughout the day.</p>
     </div>
 
     <div class="finding-card reveal">
-      <div class="fc-icon">🎬</div>
+      <div class="fc-icon">
+        <svg viewBox="0 0 24 24"><path d="M23 7a2 2 0 0 0-2.45-1.45L12 8.2 3.45 5.55A2 2 0 0 0 1 7.5v9a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V7z"></path><path d="M8 10l6 3-6 3V10z"></path></svg>
+      </div>
       <div class="fc-num">06</div>
       <h3 data-i18n="finding_6_title">Short-Form Video Drives Screen Time & Poor Sleep</h3>
       <p data-i18n="finding_6_desc">Short-form video content (Reels, TikTok, Shorts) is the content type most strongly correlated with both increased daily screen time and sleep disruption.</p>
@@ -270,7 +243,9 @@
     <div class="rec-list">
 
       <div class="rec-item reveal">
-        <div class="rec-icon">⏰</div>
+        <div class="rec-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41"></path></svg>
+        </div>
         <div>
           <h4 data-i18n="recs_1_title">Delay Your Morning Phone Check</h4>
           <p data-i18n="recs_1_desc">Avoid checking your phone for the first 30–60 minutes after waking. Data shows this simple habit is associated with lower daily nervousness and more stable mood throughout the day.</p>
@@ -278,7 +253,9 @@
       </div>
 
       <div class="rec-item reveal">
-        <div class="rec-icon">🌿</div>
+        <div class="rec-icon">
+          <svg viewBox="0 0 24 24"><path d="M2 22C2 12 10 4 22 2c0 10-8 18-20 20z"></path><path d="M9 15c3-3 8-5 13-6"></path><path d="M15 9c-3 3-5 8-6 13"></path></svg>
+        </div>
         <div>
           <h4 data-i18n="recs_2_title">Schedule Regular Digital Detox Periods</h4>
           <p data-i18n="recs_2_desc">Deliberately allocating daily or weekly offline time has been shown in referenced studies to reduce anxiety, improve focus, and restore emotional regulation.</p>
@@ -286,7 +263,9 @@
       </div>
 
       <div class="rec-item reveal">
-        <div class="rec-icon">🎬</div>
+        <div class="rec-icon">
+          <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon><line x1="1" y1="1" x2="23" y2="23"></line></svg>
+        </div>
         <div>
           <h4 data-i18n="recs_3_title">Reduce Short-Form Video Consumption</h4>
           <p data-i18n="recs_3_desc">Short-form content (TikTok, Reels, Shorts) is the single strongest driver of screen time overrun and sleep disruption. Consider time limits or scheduled viewing windows.</p>
@@ -294,7 +273,9 @@
       </div>
 
       <div class="rec-item reveal">
-        <div class="rec-icon">📊</div>
+        <div class="rec-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 3v18h18"></path><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path><circle cx="18.7" cy="8" r="1"></circle><circle cx="13.6" cy="13.2" r="1"></circle><circle cx="10.8" cy="10.5" r="1"></circle><circle cx="7" cy="14.3" r="1"></circle></svg>
+        </div>
         <div>
           <h4 data-i18n="recs_4_title">Track Your App's Mental Impact</h4>
           <p data-i18n="recs_4_desc">Actively monitor how individual apps affect your mood and anxiety. Use built-in screen time reports to identify patterns between heavy app use and emotional state changes.</p>
@@ -302,7 +283,9 @@
       </div>
 
       <div class="rec-item reveal">
-        <div class="rec-icon">🎨</div>
+        <div class="rec-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path><path d="M12 2v20"></path><path d="M12 6h6"></path><path d="M12 10h8"></path><path d="M12 14h8"></path><path d="M12 18h6"></path></svg>
+        </div>
         <div>
           <h4 data-i18n="recs_5_title">Use Grayscale Mode to Reduce Compulsive Use</h4>
           <p data-i18n="recs_5_desc">Switching your device display to grayscale removes the dopamine-triggering color stimulation that makes apps artificially compelling, reducing mindless scrolling significantly.</p>
@@ -326,10 +309,22 @@
       <h4 data-i18n="research_card_1_title">Social Media Reduction Studies</h4>
       <p data-i18n="research_card_1_desc">Multiple studies examining the effects of intentionally reducing social media use — or implementing full internet blocks — consistently report significant improvements across core mental health and cognitive metrics.</p>
       <div class="res-outcomes">
-        <span class="res-out" data-i18n="research_out_1">↓ Reduced Anxiety</span>
-        <span class="res-out" data-i18n="research_out_2">↑ Improved Sleep Quality</span>
-        <span class="res-out" data-i18n="research_out_3">↑ Better Focus</span>
-        <span class="res-out" data-i18n="research_out_4">↑ Greater Self-Discipline</span>
+        <span class="res-out">
+          <svg viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"></path></svg>
+          <span data-i18n="research_out_1">Reduced Anxiety</span>
+        </span>
+        <span class="res-out">
+          <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>
+          <span data-i18n="research_out_2">Improved Sleep Quality</span>
+        </span>
+        <span class="res-out">
+          <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>
+          <span data-i18n="research_out_3">Better Focus</span>
+        </span>
+        <span class="res-out">
+          <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>
+          <span data-i18n="research_out_4">Greater Self-Discipline</span>
+        </span>
       </div>
     </div>
 
@@ -337,9 +332,18 @@
       <h4 data-i18n="research_card_2_title">Screen Time & Adolescent Wellbeing</h4>
       <p data-i18n="research_card_2_desc">Research consistently shows a dose-response relationship between screen time and psychological wellbeing markers in adolescents and young adults — supporting our correlation findings between usage hours, sleep disruption, and mood dysregulation.</p>
       <div class="res-outcomes">
-        <span class="res-out" data-i18n="research_out_5">📉 Mood Instability with High Usage</span>
-        <span class="res-out" data-i18n="research_out_6">😴 Sleep Quality Degradation</span>
-        <span class="res-out" data-i18n="research_out_7">🧠 Cognitive Overload Signals</span>
+        <span class="res-out">
+          <svg viewBox="0 0 24 24"><path d="M23 18l-9.5-9.5-5 5L1 6"></path><path d="M17 18h6v-6"></path></svg>
+          <span data-i18n="research_out_5">Mood Instability with High Usage</span>
+        </span>
+        <span class="res-out">
+          <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <span data-i18n="research_out_6">Sleep Quality Degradation</span>
+        </span>
+        <span class="res-out">
+          <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M17 11h5M19 9v4"></path></svg>
+          <span data-i18n="research_out_7">Cognitive Overload Signals</span>
+        </span>
       </div>
     </div>
 

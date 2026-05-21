@@ -56,7 +56,7 @@ revealElements.forEach(element => {
 // --------------------------------------------------------------------------
 // Staggered Animations for Grids
 // --------------------------------------------------------------------------
-const grids = document.querySelectorAll('.var-grid, .findings-grid, .rec-list, .team-grid');
+const grids = document.querySelectorAll('.findings-grid, .rec-list, .team-grid');
 
 grids.forEach(grid => {
   const gridReveals = grid.querySelectorAll('.reveal');
@@ -85,7 +85,6 @@ const translations = {
     hero_cta_primary: "استكشف النتائج ←",
     hero_cta_secondary: "عرض لوحة البيانات",
     hero_stat_datasets: "مجموعات البيانات",
-    hero_stat_variables: "المتغيرات المتتبعة",
     hero_stat_findings: "أهم النتائج",
     hero_stat_team: "أعضاء الفريق",
     about_label: "عن المشروع",
@@ -98,30 +97,9 @@ const translations = {
     about_card_2_title: "النطاق",
     about_card_2_desc: "مصر (عينة محلية) + بيانات سلوكية عالمية للجيل زد",
     about_card_3_title: "النهج",
-    about_card_3_desc: "تحليل ارتباط كمي بقاعدة بيانات بوستجري إس كيو إل منظمة",
+    about_card_3_desc: "تحليل البيانات لاكتشاف تأثير العادات الرقمية على الصحة النفسية",
     about_card_4_title: "المخرجات",
     about_card_4_desc: "توصيات مبنية على الأدلة لعادات رقمية أكثر صحة",
-    variables_label: "هندسة السمات",
-    variables_title: "المتغيرات المتتبعة",
-    variables_desc: "تم ربط كل نقطة بيانات ببعد سلوكي أو نفسي.",
-    var_1_title: "استخدام الهاتف اليومي",
-    var_1_desc: "إجمالي ساعات استخدام الهاتف يوميا",
-    var_2_title: "ساعات وسائل التواصل",
-    var_2_desc: "الساعات المقضية على المنصات الاجتماعية",
-    var_3_title: "مدة النوم",
-    var_3_desc: "متوسط ساعات النوم ليلا",
-    var_4_title: "فحص الهاتف صباحا",
-    var_4_desc: "هل يتم فحص الهاتف فور الاستيقاظ",
-    var_5_title: "مستوى التوتر",
-    var_5_desc: "التهيج والانفعال المبلغ عنه ذاتيا",
-    var_6_title: "النشاط البدني",
-    var_6_desc: "تكرار ونوع التمارين أسبوعيا",
-    var_7_title: "التطبيقات الأكثر استخداما",
-    var_7_desc: "أكثر التطبيقات استخداما بأسماء معيارية",
-    var_8_title: "مستوى التصفح السلبي",
-    var_8_desc: "الميل للتصفح المتواصل للمحتوى السلبي",
-    var_9_title: "نوع المحتوى",
-    var_9_desc: "فيديو قصير، أخبار، منشورات اجتماعية وغيرها",
     results_label: "أهم النتائج",
     results_title: "ما الذي كشفته البيانات",
     results_desc: "ستة ارتباطات مبنية على الأدلة مستخرجة من بيانات الجيل زد في مصر والعالم.",
@@ -163,15 +141,15 @@ const translations = {
     research_desc: "تتوافق النتائج مع دراسات محكمة حول السلوك الرقمي والصحة النفسية.",
     research_card_1_title: "دراسات تقليل استخدام وسائل التواصل",
     research_card_1_desc: "تشير الدراسات إلى أن تقليل استخدام وسائل التواصل أو تطبيق فترات انقطاع كامل يرتبط بتحسن واضح في مؤشرات الصحة النفسية والإدراكية.",
-    research_out_1: "↓ انخفاض القلق",
-    research_out_2: "↑ تحسن جودة النوم",
-    research_out_3: "↑ زيادة التركيز",
-    research_out_4: "↑ انضباط ذاتي أعلى",
+    research_out_1: "انخفاض القلق",
+    research_out_2: "تحسن جودة النوم",
+    research_out_3: "زيادة التركيز",
+    research_out_4: "انضباط ذاتي أعلى",
     research_card_2_title: "وقت الشاشة وصحة اليافعين",
     research_card_2_desc: "توضح الأبحاث علاقة جرعة واستجابة بين وقت الشاشة ومؤشرات الرفاه النفسي لدى المراهقين والشباب، ما يدعم ارتباطاتنا بين ساعات الاستخدام واضطراب النوم وتقلب المزاج.",
-    research_out_5: "📉 تقلب المزاج مع الاستخدام المرتفع",
-    research_out_6: "😴 تدهور جودة النوم",
-    research_out_7: "🧠 مؤشرات إرهاق إدراكي",
+    research_out_5: "تقلب المزاج مع الاستخدام المرتفع",
+    research_out_6: "تدهور جودة النوم",
+    research_out_7: "مؤشرات إرهاق إدراكي",
     team_label: "الفريق",
     team_title: "داتا ريبرز",
     team_desc: "أربعة محللين. مهمة واحدة: تحويل البيانات إلى وضوح.",
@@ -270,6 +248,34 @@ function initSettings() {
     const newLang = isAr ? 'en' : 'ar';
     localStorage.setItem('lang', newLang);
     applyTranslation(newLang);
+  });
+
+  // Mobile Menu Toggling
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinksContainer = document.querySelector('.nav-links');
+  const menuIcon = menuToggle?.querySelector('.menu-icon');
+  const closeIcon = menuToggle?.querySelector('.close-icon');
+
+  menuToggle?.addEventListener('click', () => {
+    const isOpen = navLinksContainer.classList.toggle('open');
+    document.body.classList.toggle('menu-open', isOpen);
+    if (isOpen) {
+      if (menuIcon) menuIcon.style.display = 'none';
+      if (closeIcon) closeIcon.style.display = 'block';
+    } else {
+      if (menuIcon) menuIcon.style.display = 'block';
+      if (closeIcon) closeIcon.style.display = 'none';
+    }
+  });
+
+  // Close menu when clicking a link
+  navLinksContainer?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinksContainer.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      if (menuIcon) menuIcon.style.display = 'block';
+      if (closeIcon) closeIcon.style.display = 'none';
+    });
   });
 }
 
