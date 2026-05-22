@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Scratch / helper artifacts
+scratch_pdf/
+parse.js
+extracted_pdf.txt
+
+# Package manifests (not used in this project)
+package.json
+package-lock.json
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/

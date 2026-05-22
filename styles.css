@@ -58,6 +58,12 @@ html {
   scroll-behavior: smooth;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
 body, nav, section, .mini-card, .finding-card, .glass-card, .dash-wrapper, .rec-item, .res-card, .team-card, .btn-p, .btn-s {
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -890,6 +896,10 @@ section {
   text-align: center;
   transition: 0.3s;
   cursor: default;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .team-card:hover {
@@ -971,6 +981,8 @@ section {
   font-size: 0.78rem;
   color: var(--text-light);
   line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 20px;
 }
 
 .t-skills {
@@ -1680,7 +1692,6 @@ section {
   font-weight: 500;
   flex: 1;
   text-align: center;
-  padding-right: 50px;
 }
 
 .dash-title span {
@@ -1689,11 +1700,54 @@ section {
   font-size: 0.72rem;
 }
 
+.dash-open-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  background: rgba(218, 186, 134, 0.06);
+  border: 1px solid rgba(218, 186, 134, 0.15);
+  padding: 5px 12px;
+  border-radius: 100px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.dash-open-btn:hover {
+  background: var(--accent);
+  color: #0d0b09;
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(218, 186, 134, 0.2);
+  transform: translateY(-1px);
+}
+
+.dash-open-icon {
+  width: 12px;
+  height: 12px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  transition: transform 0.3s ease;
+}
+
+.dash-open-btn:hover .dash-open-icon {
+  transform: translate(2px, -2px);
+}
+
+html[dir="rtl"] .dash-open-btn:hover .dash-open-icon {
+  transform: translate(-2px, -2px);
+}
+
 .dash-container iframe {
   width: 100%;
-  height: 700px;
+  aspect-ratio: 16 / 9.5; /* Perfectly matches standard report width with Power BI bottom bar */
+  height: auto;
   display: block;
   background: var(--white);
+  border: none;
+  overflow: hidden;
 }
 
 /* ==========================================================================
@@ -1803,10 +1857,6 @@ footer p {
     padding: clamp(50px, 6vw, 80px) clamp(12px, 3vw, 20px);
   }
   
-  .dash-container iframe {
-    height: 500px;
-  }
-  
   .about-grid {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -1856,18 +1906,21 @@ footer p {
 }
 
 @media (max-width: 580px) {
-  .dash-container iframe {
-    height: 380px;
-  }
-  
   .dash-title {
     font-size: 0.72rem;
-    padding-right: 0;
   }
   
   .dash-top {
     justify-content: space-between;
     padding: 10px 14px;
+  }
+  
+  .dash-open-btn span {
+    display: none;
+  }
+  
+  .dash-open-btn {
+    padding: 6px;
   }
   
   .rec-item {
@@ -1987,6 +2040,50 @@ footer p {
   
   .dash-stats {
     grid-template-columns: 1fr;
+  }
+  
+  .hero-ctas {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 10px;
+  }
+  
+  .hero-ctas .btn-p,
+  .hero-ctas .btn-s {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  
+  .rec-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 18px;
+  }
+}
+
+@media (max-width: 375px) {
+  nav {
+    padding: 10px 12px;
+  }
+  .nav-controls {
+    gap: 6px;
+  }
+  .control-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.65rem;
+  }
+  .nav-brand {
+    font-size: 0.95rem;
+  }
+  .site-logo {
+    width: 24px;
+    height: 24px;
   }
 }
 
@@ -2234,6 +2331,10 @@ footer p {
 
 [data-theme="dark"] .dash-top .dash-dots span {
   opacity: 0.8;
+}
+
+[data-theme="dark"] .dash-container iframe {
+  background: #0d0b09;
 }
 
 [data-theme="dark"] nav {
