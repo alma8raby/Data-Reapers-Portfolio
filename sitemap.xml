@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!--
+    Data Reapers — Sitemap
+    Deployed: https://data-reapers.vercel.app
+    Project: Gen Z Social Media & Mental Health Behavioral Analytics
+  -->
+
+  <!-- Homepage — English (default) -->
+  <url>
+    <loc>https://data-reapers.vercel.app/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://data-reapers.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://data-reapers.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://data-reapers.vercel.app/"/>
+  </url>
+
+  <!-- Section anchors — for enhanced crawl coverage of key content areas -->
+
+  <url>
+    <loc>https://data-reapers.vercel.app/#about</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://data-reapers.vercel.app/#results</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://data-reapers.vercel.app/#dashboard</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://data-reapers.vercel.app/#research</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://data-reapers.vercel.app/#recs</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://data-reapers.vercel.app/#team</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://data-reapers.vercel.app/#repository</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

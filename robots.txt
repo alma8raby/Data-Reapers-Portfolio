@@ -1,0 +1,54 @@
+# Data Reapers — robots.txt
+# Deployed: https://data-reapers.vercel.app
+# Project: Gen Z Social Media & Mental Health Behavioral Analytics Research
+
+# Allow all well-behaved search engine crawlers
+User-agent: *
+Allow: /
+
+# Explicitly allow major search engine bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /assets/
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Block AI training scrapers that do not respect content licensing
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+# Sitemap location — helps crawlers discover all indexed pages
+Sitemap: https://data-reapers.vercel.app/sitemap.xml
+
+# Host declaration
+Host: data-reapers.vercel.app

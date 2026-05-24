@@ -56,12 +56,55 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Offset for fixed nav — prevents headings being hidden behind navbar on anchor links */
+}
+
+/* Skip-to-content link — visually hidden until focused (WCAG 2.4.1) */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 9999;
+  background: var(--beige-800);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 0 0 10px 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s ease;
+  white-space: nowrap;
+}
+.skip-to-content:focus {
+  top: 0;
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 a:focus-visible,
 button:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 4px;
+}
+
+/* Accessibility: respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 body, nav, section, .mini-card, .finding-card, .glass-card, .dash-wrapper, .rec-item, .res-card, .team-card, .btn-p, .btn-s {
@@ -740,11 +783,28 @@ section {
 
 .fc-num {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  color: var(--beige-200);
   line-height: 1;
   margin-bottom: 10px;
+  letter-spacing: 0.04em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Subtle warm gradient — light mode */
+  background: linear-gradient(135deg, var(--beige-400) 0%, var(--beige-300) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* graceful fallback for browsers that skip clip */
+}
+
+/* Dark mode: lift champagne warmth into visibility without blowing contrast */
+[data-theme="dark"] .fc-num {
+  background: linear-gradient(135deg, var(--beige-700) 0%, var(--beige-600) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .finding-card h3 {
